@@ -78,7 +78,6 @@ main {
 .navbar {
     background-color: var(--bg1-color) !important;
     border-bottom: 1px solid #d4d1c7;
-    /* background color funkar ej, tror det ligger från dina tidigare färginställningar */
 }
 
 .navbar-toggler {
@@ -164,13 +163,15 @@ main {
     background-position: center;
     background-attachment: scroll;
 
-    /* postition relative som ankare till knappen "add-background" */
-    position: relative;
-
     /* FYLLER UT HELA FÖRSTA SIDAN (- HEADERNS HEIGHT) */
     height: calc(100vh - 5rem);
 
     padding: var(--sid-padding-mobil);
+}
+
+.startsida-text{
+    display: flex;
+    flex-direction: column;
 }
 
 .startsida h6 {
@@ -205,13 +206,14 @@ main {
     color: white;
 }
 
-.startsida-text .add-background {
-    position: absolute;
-
-    bottom: 4rem;
+.add-background {
     padding: 0.7rem 1.5rem;
 
+    width: fit-content;
+
     font-family: Arial, Helvetica, sans-serif;
+
+    margin-top: 1rem;
 
     font-weight: 600;
     color: var(--green-color);
@@ -878,6 +880,45 @@ td h2 {
     .logo-container {
         margin-left: 12%;
     }
+
+/* === STARTSIDA === */
+
+/* main */
+.startsida{
+    display: flex;
+}
+
+.startsida-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 77%;
+
+}
+
+.startsida h6 {
+    width: fit-content;
+}
+
+.startsida h1 {
+    font-size: 6.8rem;
+    line-height: 6.5rem;
+}
+
+/* om */
+
+.om-paketcontainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+ /* === GALLERI === */
+
+.galleri-container {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 0.5rem;
+}
 
     /* Paket */
     .paket {
