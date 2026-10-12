@@ -109,6 +109,10 @@ main {
     text-decoration: none;
 }
 
+.navbar-nav {
+    margin-right: 3%;
+}
+
 .small-text {
     color: #5f5d57;
     font-size: 0.7rem;
