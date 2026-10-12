@@ -66,9 +66,21 @@ main {
 
 /* Navbar Styles*/
 
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    width: auto;
+}
+
 .navbar {
     background-color: var(--bg1-color) !important;
     /* background color funkar ej, tror det ligger från dina tidigare färginställningar */
+}
+
+.navbar-toggler {
+    margin-right: 20px;
 }
 
 .logo {
@@ -80,6 +92,12 @@ main {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+}
+
+.brand-wrapper a {
+    text-decoration: none;
+    margin: 0;
+    line-height: 1.2;
 }
 
 .navbar-brand {
@@ -781,4 +799,8 @@ td button,
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     gap: 0.5rem;
+}
+
+@media (min-width: 1024px) {
+  
 }
