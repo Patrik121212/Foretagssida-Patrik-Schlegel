@@ -471,7 +471,6 @@ td h2 {
     text-align: left;
 }
 
-td button,
 .paket-knapp {
     display: inline-flex;
     align-items: center;
@@ -883,6 +882,14 @@ td button,
         margin-right: auto;
     }
 
+    .paket-knapp {
+        transition: background-color 0.3s ease;
+    }
+
+    .paket-knapp:hover {
+        background-color: var(--bg3-color);
+    }
+
     .table {
         width: 100% !important;
         max-width: 100% !important;
@@ -965,5 +972,11 @@ td button,
         width: 100%;
         max-width: 700px;
         margin-left: 3%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .logo-container {
+        margin-left: 12.2%;
     }
 }
