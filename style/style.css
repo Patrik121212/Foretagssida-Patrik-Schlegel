@@ -663,9 +663,9 @@ td button,
 
 .guide-porträtt img{
     display: block;
-    width: 90%;
-    height: auto;
-    margin: auto;
+    height: 162px;
+    width: 297px;
+    margin-left: 16px;
     object-fit: cover;
 
     border-radius: 30px;
