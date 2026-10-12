@@ -829,7 +829,7 @@ td h2 {
 /* Desktop View*/
 @media (min-width: 990px) {
     .navbar-nav {
-        margin-right: 3%;
+        margin-right: 18%;
         white-space: nowrap;
     }
     
