@@ -386,6 +386,12 @@ footer {
     padding: var(--sid-padding-mobil);
 }
 
+.paket h2 {
+    color: #193c2b;
+    font-size: 96px;
+    font-family: "DM Serif Display", serif;
+}
+
 .paket p {
     color: #6d756d;
     letter-spacing: 0.1rem;
@@ -828,34 +834,67 @@ td button,
     white-space: nowrap;
   }
 
-  .paket-section {
-    width: 100%;
-    max-width: none;
-    box-sizing: border-box;
-    margin-right: 20px;
-  }
+    .paket {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 60px;
+        align-items: end;
+        background-color: var(--bg1-color);
+    }
 
-  .paket-section article {
-    width: calc(99%);
-    max-width: none;
-    box-sizing: border-box;
-  }
+    .paket h6 {
+        grid-column: 1 / -1;
+        margin-bottom: 20px;
+        margin-left: 12%;
+    }
 
-  .table {
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
-    margin: 0 !important;
-    table-layout: fixed !important;
-    border-collapse: collapse;
-    box-sizing: border-box;
-  }
+    .paket h2 {
+        grid-column: 1;
+        font-size: 96px;
+        margin: 0;
+        margin-left: 25%;
+    }
 
-  .table th,
-  .table td {
-    padding-left: 10px !important;
-    padding-right: 8px !important;
-    overflow-wrap: anywhere;
-    box-sizing: border-box;
-  }
+    .paket p {
+        grid-column: 2;
+        font-size: 18px;
+        font-family: "DM Sans", sans-serif;
+        color: #616860;
+        max-width: 400px;
+        margin: 0 0 6px;
+        line-height: 1.7;
+    }
+
+    .paket-section {
+        width: 100%;
+        max-width: none;
+        box-sizing: border-box;
+        margin: 0 auto;
+    }
+
+    .paket-section article {
+        width: 75%;
+        max-width: none;
+        box-sizing: border-box;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .table {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        margin: 0 auto !important;
+        table-layout: fixed !important;
+        border-collapse: collapse;
+        box-sizing: border-box;
+    }
+
+    .table th,
+    .table td {
+        padding-left: 10px !important;
+        padding-right: 8px !important;
+        overflow-wrap: anywhere;
+        box-sizing: border-box;
+    }
 }
