@@ -428,7 +428,7 @@ footer {
 .table th {
     color: #626a62;
     background-color: #e8e4d8;
-    font-size: 11px;
+    font-size: 12px;
     font-family: "DM Sans", sans-serif;
     padding: 0 6px 20px;
     letter-spacing: 0.08rem;
@@ -895,8 +895,7 @@ td button,
 
     .table th,
     .table td {
-        padding-left: 10px !important;
-        padding-right: 8px !important;
+        padding: 16px 8px 16px 10px !important;
         overflow-wrap: anywhere;
         box-sizing: border-box;
     }
