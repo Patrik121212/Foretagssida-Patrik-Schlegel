@@ -325,10 +325,24 @@ footer {
 }
 
 .footer-paragraph {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     font-size: 16px;
     font-family: "Arial, Helvetica, sans-serif";
     color: var(--bg2-color);
     margin-bottom: 1.8rem;
+}
+
+.footer-paragraph img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+.footer-paragraph a {
+  text-decoration: none;
+  color: var(--bg2-color);
 }
 
 .footer-small-title {
