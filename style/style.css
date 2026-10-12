@@ -827,7 +827,7 @@ td button,
 }
 
 /* Desktop View*/
-@media (min-width: 1024px) {
+@media (min-width: 990px) {
 /* Paket */
   .navbar-nav {
     margin-right: 3%;
@@ -896,5 +896,45 @@ td button,
         padding-right: 8px !important;
         overflow-wrap: anywhere;
         box-sizing: border-box;
+    }
+
+    /* Kontakt */
+    .kontakt-banner-rubrik {
+        margin-left: 12%;
+    }
+
+    .kontakt-banner-text {
+        display: flex;
+        column-gap: 60px;
+        align-items: end;
+    }
+
+    .kontakt-banner-text h3 {
+        font-size: 96px;
+        font-family: "DM Sans Display", serif;
+        font-weight: bold;
+        margin-bottom: 20px;
+        margin-left: 12%;
+    }
+
+    .kontakt-banner-text p {
+        font-size: 18px;
+        font-family: "DM Sans", sans-serif;
+        color: #cbd6ca;
+        max-width: 400px;
+        margin-left: 5%;
+    }
+
+    .guider h2 {
+        margin-left: 13%;
+    }
+
+    .guider h1 {
+        margin-left: 13%;
+    }
+
+    .container-guide-kort {
+        display: flex;
+        justify-content: center;
     }
 }
