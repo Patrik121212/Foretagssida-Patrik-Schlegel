@@ -229,11 +229,44 @@ main {
     flex-direction: column;
     gap: 2rem;
 
-    height: 100vh;
+    min-height: 100vh;
 
     padding: var(--sid-padding-mobil);
 
     background-color: var(--bg1-color);
+}
+
+.om-paketcontainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.om-paket {
+    width: 100%;
+    height: auto;
+
+    padding: 2rem;
+
+    background-color: var(--bg2-color);
+    border-radius: 15px;
+}
+
+.om-paket h3 {
+    color: var(--green-color);
+    font-weight: 700;
+    line-height: 2rem;
+}
+
+.om-paket p {
+    font-size: small;
+    letter-spacing: 0;
+    line-height: 1.5rem;
+}
+
+.om-paket a {
+    text-decoration: none;
+    color: var(--green-color);
 }
 
 /* === BILDER === */
@@ -346,8 +379,8 @@ footer {
 }
 
 .footer-paragraph a {
-  text-decoration: none;
-  color: var(--bg2-color);
+    text-decoration: none;
+    color: var(--bg2-color);
 }
 
 .footer-small-title {
@@ -667,7 +700,7 @@ td h2 {
     top: 5rem;
 }
 
-.guide-porträtt img{
+.guide-porträtt img {
     display: block;
     height: 162px;
     width: 297px;
@@ -839,7 +872,7 @@ td h2 {
         margin-right: 18%;
         white-space: nowrap;
     }
-    
+
     .logo-container {
         margin-left: 12%;
     }
