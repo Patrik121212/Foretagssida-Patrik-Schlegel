@@ -587,6 +587,13 @@ td h2 {
     border-radius: 30px;
 }
 
+.paket-individuell-img {
+    width: 350px;
+    height: 250px;
+    margin-top: 20px;
+    object-fit: cover;
+}
+
 /* Om & Kontakt */
 .kontakt-banner {
     display: flex;
