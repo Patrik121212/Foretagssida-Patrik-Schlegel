@@ -381,7 +381,7 @@ footer {
 .paket {
     display: flex;
     flex-direction: column;
-    background-color: var(--bg2-color);
+    background-color: var(--bg1-color);
 
     padding: var(--sid-padding-mobil);
 }
@@ -836,7 +836,7 @@ td button,
     .logo-container {
         margin-left: 12%;
     }
-    
+
     /* Paket */
     .paket {
         display: grid;
