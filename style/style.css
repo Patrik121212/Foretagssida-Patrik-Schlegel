@@ -109,8 +109,8 @@ main {
     text-decoration: none;
 }
 
-.navbar-nav {
-    margin-right: 3%;
+.nav-link {
+    margin-left: 3%;
 }
 
 .small-text {
@@ -821,5 +821,8 @@ td button,
 }
 
 @media (min-width: 1024px) {
-  
+  .navbar-nav {
+    margin-right: 3%;
+    white-space: nowrap;
+  }
 }
