@@ -820,9 +820,42 @@ td button,
     gap: 0.5rem;
 }
 
+/* Desktop View*/
 @media (min-width: 1024px) {
+
   .navbar-nav {
     margin-right: 3%;
     white-space: nowrap;
+  }
+
+  .paket-section {
+    width: 100%;
+    max-width: none;
+    box-sizing: border-box;
+    margin-right: 20px;
+  }
+
+  .paket-section article {
+    width: calc(99%);
+    max-width: none;
+    box-sizing: border-box;
+  }
+
+  .table {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    table-layout: fixed !important;
+    border-collapse: collapse;
+    box-sizing: border-box;
+  }
+
+  .table th,
+  .table td {
+    padding-left: 10px !important;
+    padding-right: 8px !important;
+    overflow-wrap: anywhere;
+    box-sizing: border-box;
   }
 }
