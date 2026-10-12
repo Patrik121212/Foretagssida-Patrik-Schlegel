@@ -822,7 +822,7 @@ td button,
 
 /* Desktop View*/
 @media (min-width: 1024px) {
-
+/* Paket */
   .navbar-nav {
     margin-right: 3%;
     white-space: nowrap;
