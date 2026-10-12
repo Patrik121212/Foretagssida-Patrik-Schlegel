@@ -939,4 +939,31 @@ td button,
         display: flex;
         justify-content: center;
     }
+
+    .kontakt-section {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: flex-start;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .kontakt-section h1 {
+        margin-left: 32%;
+    }
+
+    .kontakt-section h2 {
+        margin-left: 32%;
+        font-size: 60px;
+    }
+
+    .kontakt-section p {
+        margin-left: 32%;
+    }
+
+    .kontakta-oss {
+        width: 100%;
+        max-width: 700px;
+        margin-left: 3%;
+    }
 }
