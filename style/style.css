@@ -828,12 +828,16 @@ td button,
 
 /* Desktop View*/
 @media (min-width: 990px) {
-/* Paket */
-  .navbar-nav {
-    margin-right: 3%;
-    white-space: nowrap;
-  }
-
+    .navbar-nav {
+        margin-right: 3%;
+        white-space: nowrap;
+    }
+    
+    .logo-container {
+        margin-left: 12%;
+    }
+    
+    /* Paket */
     .paket {
         display: grid;
         grid-template-columns: 1fr 1fr;
