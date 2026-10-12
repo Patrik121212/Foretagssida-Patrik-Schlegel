@@ -366,10 +366,12 @@ footer {
     display: flex;
     align-items: center;
     gap: 10px;
+    width: fit-content;
     font-size: 16px;
     font-family: "Arial, Helvetica, sans-serif";
     color: var(--bg2-color);
     margin-bottom: 1.8rem;
+    text-decoration: none;
 }
 
 .footer-paragraph img {
