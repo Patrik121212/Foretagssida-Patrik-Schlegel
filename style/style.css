@@ -482,21 +482,25 @@ footer {
 /* PAKET */
 
 .paket-main {
-    font-family: var(--rubrik);
+    font-family: Arial, Helvetica, sans-serif;
+
     background-color: var(--bg1-color);
-    padding: var(--sid-padding-mobil);
 }
 
 .paket {
     display: flex;
     flex-direction: column;
+    background-color: var(--bg1-color);
 
+    padding: var(--sid-padding-mobil);
 }
 
 .paket h2 {
-    color: #193c2b;
-    font-size: 96px;
-    font-family: "DM Serif Display", serif;
+    color: var(--bg3-color);
+    font-size: 3.75rem;
+    font-family: var(--rubrik);
+    line-height: 4rem;
+    margin-bottom: 3rem;
 }
 
 .paket p {
@@ -529,14 +533,13 @@ footer {
     min-width: 0;
     border-collapse: collapse;
     table-layout: auto;
-    border: 1px solid var(--bg2-color);
 }
 
 .table th {
-    color: #626a62;
-    background-color: #e8e4d8;
+    color: var(--p2-color);
+    background-color: var(--bg2-color);
     font-size: 12px;
-    font-family: "DM Sans", sans-serif;
+    font-family: var(--p-font);
     padding: 0 6px 20px;
     letter-spacing: 0.08rem;
     overflow-wrap: break-word;
@@ -544,7 +547,7 @@ footer {
 }
 
 .table td {
-    color: #596159;
+    color: var(--p2-color);
     font-size: 14px;
     font-family: "DM Sans", sans-serif;
     line-height: 1.5rem;
