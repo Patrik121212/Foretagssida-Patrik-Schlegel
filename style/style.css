@@ -1241,8 +1241,8 @@ td h2 {
 
 /* Fokusmarkering */
 
-a:focus,
-button:focus {
+a:focus-visible,
+button:focus-visible {
     outline: 4px solid var(--extra-color1); 
     outline-offset: 4px;
 }
