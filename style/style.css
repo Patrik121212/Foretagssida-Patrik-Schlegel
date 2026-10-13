@@ -1,5 +1,35 @@
 /* JAG BÖRJAR MED ATT UTGÅ FRÅN MOBILSKÄRM NÄR JAG JOBBAR I CSS, ihopne SE 375 x 667 px */
 
+/* IMPORTERAR FONTS FRÅN FIGMAS SKISS*/
+
+@font-face {
+    font-family: "DMSerifDisplay";
+    src: url("/Fonts/DMSerifDisplay-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "DMSans";
+    src: url("/Fonts/DMSans-Light.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: "DMSans";
+    src: url("/Fonts/DMSans-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "DMSans";
+    src: url("/Fonts/DMSans-Bold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 600;
+}
+
 /* NOLLSTÄLLER WEBLÄSERENS STANDARD MARGINALER OCH SÄTTER ALL BOX-SIZING PÅ BORDEBOX, FÖR ATT FÅ MER KONTROLL */
 
 * {
@@ -8,37 +38,53 @@
     box-sizing: border-box;
 }
 
-/* HÄMTAR FÄRGKOD FRÅN SKISSEN OCH SPARAR I VARIABLER */
+/* HÄMTAR FÄRGKOD FRÅN SKISSEN OCH SPARAR I VARIABLER. SKAPAR OCKSÅ FONTVARIABLER */
 
 :root {
-    --font: "Arial, Helvetica, sans-serif";
+    --rubrik: "DMSerifDisplay", serif;
+
+    --h6-font: "DMSans", sans-serif;
+
+    --p-font: "DMSans", sans-serif;
+
+    --p1-color: #edf2eb;
+    --p2-color: #4f574f;
+    --p3-color: #697068;
+
+    --extra-color1: #e8c97c;
+    --extra-color2: #8a7344;
 
     --green-color: #365d46;
+
     --bg1-color: #f7f3e9;
     --bg2-color: #e7e2d4;
     --bg3-color: #193c2b;
 
-    --sid-padding-mobil: 4rem 1.1rem;
+    --sid-padding-mobil: 4rem 1rem;
 }
 
 /* STANDARD FÖR TEXT TAGGAR */
 
 h1 {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--rubrik);
     font-size: 3.5rem;
     font-weight: 600;
+
+    color: white;
 }
 
 h2 {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--rubrik);
     font-size: 3rem;
-    font-weight: 600;
+
+    color: var(--bg3-color);
 }
 
 h6 {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--h6-font);
     font-size: 0.7rem;
-    font-weight: 400;
+    font-weight: 600;
+    letter-spacing: 0.15rem;
 
     margin-bottom: 1.5rem;
 
@@ -46,7 +92,8 @@ h6 {
 }
 
 p {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--p-font);
+    font-weight: 200;
 
     letter-spacing: 0.1rem;
     line-height: 2rem;
@@ -77,7 +124,7 @@ main {
 
 .navbar {
     background-color: var(--bg1-color) !important;
-    border-bottom: 1px solid #d4d1c7;
+    border-bottom: 1px solid var(--bg2-color);
 }
 
 .navbar-toggler {
@@ -98,14 +145,13 @@ main {
 .brand-wrapper a {
     text-decoration: none;
     margin: 0;
-    line-height: 1.2;
+    line-height: 0.7;
 }
 
 .navbar-brand {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--rubrik);
     font-size: 1.3rem;
-    font-weight: bold;
-    color: var(--green-color);
+    color: var(--bg3-color);
     text-decoration: none;
 }
 
@@ -114,16 +160,15 @@ main {
 }
 
 .small-text {
-    color: #5f5d57;
+    color: var(--p3-color);
     font-size: 0.7rem;
     margin-top: -0.6rem;
 }
 
 .nav-link {
-    color: #5d645e;
-    font-size: 14px;
-    font-weight: bold;
-    font-family: "DM sans", sans-serif;
+    color: var(--bg3-color);
+    font-size: 1rem;
+    font-family: var(--rubrik);
 }
 
 .nav-link.active {
@@ -153,10 +198,9 @@ main {
 /* === STARTSIDA === */
 
 .startsida {
-    /* Lägger bakgrundsbilden här för att den inte ska följa med när man scorllar neråt */
     background-image: 
     /* Blandar bild med gradient */
-        linear-gradient(to right, rgba(54, 93, 70, 0.8), rgba(0, 0, 0, 0.3)),
+        linear-gradient(to right, rgb(40, 71, 52), rgba(0, 0, 0, 0.3)),
         url(../Img/photo-1787951611386-b042ec1c6b13.jpg);
 
     background-size: cover;
@@ -169,16 +213,18 @@ main {
     padding: var(--sid-padding-mobil);
 }
 
-.startsida-text{
+.startsida-text {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+
+    height: 100%;
 }
 
 .startsida h6 {
-    font-size: 0.7rem;
-    text-align: center;
+    text-align: start;
+    line-height: 1rem;
 
-    margin-bottom: 1.5rem;
     padding: 0.3rem 1.5rem;
 
     color: rgba(255, 255, 255, 0.856);
@@ -187,31 +233,26 @@ main {
     /* frostat glas */
     backdrop-filter: blur(3px);
 
-    border: 1px solid lightgray;
+    border: 1px solid rgba(255, 255, 255, 0.856);
     border-radius: 30px;
 }
 
-.startsida h1 {
-    color: white;
-}
-
 .titel-nyfärg {
-    color: #d8b66b;
+    color: var(--extra-color1);
 }
 
 .startsida p {
-    font-weight: 700;
-
     margin-top: 1rem;
-    color: white;
+    color: var(--p1-color);
 }
 
-.add-background {
+.knapp-hem {
     padding: 0.7rem 1.5rem;
 
     width: fit-content;
+    text-decoration: none;
 
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--h6-font);
 
     margin-top: 1rem;
 
@@ -220,7 +261,6 @@ main {
 
     background-color: var(--bg1-color);
 
-    border: 1px solid var(--green-color);
     border-radius: 30px;
 }
 
@@ -238,6 +278,20 @@ main {
     background-color: var(--bg1-color);
 }
 
+.sträck {
+    color: var(--extra-color2);
+}
+
+.text-större {
+    color: var(--p2-color);
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.text-mindre {
+    color: var(--p3-color);
+}
+
 .om-paketcontainer {
     display: flex;
     flex-direction: column;
@@ -245,6 +299,9 @@ main {
 }
 
 .om-paket {
+    display: flex;
+    flex-direction: column;
+
     width: 100%;
     height: auto;
 
@@ -254,21 +311,33 @@ main {
     border-radius: 15px;
 }
 
+.om-paket a {
+    margin-top: auto;
+}
+
+.om-paket h6 {
+    color: var(--extra-color2);
+}
+
 .om-paket h3 {
-    color: var(--green-color);
-    font-weight: 700;
-    line-height: 2rem;
+    font-family: var(--rubrik);
+    font-weight: 500;
+    line-height: 2.5rem;
+    font-size: 2rem;
+    color: var(--bg3-color);
 }
 
 .om-paket p {
     font-size: small;
     letter-spacing: 0;
     line-height: 1.5rem;
+    color: var(--p2-color);
 }
 
 .om-paket a {
+    font-family: var(--p-font);
     text-decoration: none;
-    color: var(--green-color);
+    color: var(--p2-color);
 }
 
 /* === BILDER === */
@@ -276,12 +345,30 @@ main {
 .bilder-text {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
     min-height: 100vh;
 
     padding: var(--sid-padding-mobil);
 
     background-color: var(--bg2-color);
+}
+
+.knapp-galleri {
+    text-decoration: none;
+    padding: 0.7rem 1.5rem;
+
+    width: fit-content;
+
+    font-family: var(--h6-font);
+
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    font-weight: 600;
+    color: var(--p1-color);
+
+    background-color: var(--green-color);
+
+    border-radius: 30px;
 }
 
 .bilder-container {
@@ -300,21 +387,6 @@ main {
 
 /* VÄNNER */
 
-.bilder-text .add-background {
-    align-self: flex-start;
-
-    margin-top: 1.5rem;
-
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600;
-    color: var(--bg1-color);
-
-    background-color: var(--green-color);
-
-    padding: 0.7rem 1.5rem;
-    border-radius: 30px;
-}
-
 .vänner {
     min-height: 30vh;
 
@@ -325,7 +397,7 @@ main {
 
 .vänner h6 {
     text-align: center;
-    color: #5f5d57;
+    color: var(--p3-color);
 }
 
 .partners {
@@ -334,12 +406,17 @@ main {
     flex-wrap: wrap;
     gap: 1.5rem;
 
+    font-size: 1.5rem;
+
     margin-top: 1.5rem;
 }
 
-.partners div {
-    font-size: 1.5rem;
-    color: #5f5d57;
+.partners-text {
+    font-family: var(--rubrik);
+
+    color: var(--p3-color);
+
+    font-weight: 500;
 }
 
 /* Footer styles */
@@ -351,8 +428,7 @@ main {
 
 footer {
     margin-top: auto;
-    background-color: var(--green-color);
-    color: #eeece1;
+    background-color: var(--bg3-color);
     padding: 20px 0;
 }
 
@@ -361,7 +437,7 @@ footer {
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 1rem;
-    font-family: "Arial, Helvetica, sans-serif";
+    font-family: var(--rubrik);
 }
 
 .footer-paragraph {
@@ -370,9 +446,9 @@ footer {
     gap: 10px;
     width: fit-content;
     font-size: 16px;
-    font-family: "Arial, Helvetica, sans-serif";
+    font-family: var(--p-font);
     color: var(--bg2-color);
-    margin-bottom: 1.8rem;
+    margin-bottom: 1rem;
     text-decoration: none;
 }
 
@@ -383,21 +459,23 @@ footer {
 }
 
 .footer-paragraph a {
+    font-family: var(--p-font);
+    font-size: 0.8rem;
     text-decoration: none;
     color: var(--bg2-color);
 }
 
 .footer-small-title {
     font-size: 12px;
-    color: #d8b66b;
+    color: var(--extra-color1);
     font-weight: bold;
     margin-bottom: 10px;
-    font-family: "Arial, Helvetica, sans-serif";
+    font-family: var(--p-font);
 }
 
 .footer-small-title {
     margin-bottom: 1rem;
-    color: #d8b66b;
+    color: var(--extra-color1);
 }
 
 .footer-small-title + p {
@@ -421,19 +499,31 @@ footer {
     flex-direction: column;
     background-color: var(--bg1-color);
 
-    padding: var(--sid-padding-mobil);
+    padding: 4rem 1rem 1rem;
 }
 
 .paket h2 {
-    color: #193c2b;
-    font-size: 96px;
-    font-family: "DM Serif Display", serif;
+    color: var(--bg3-color);
+    font-size: 3.75rem;
+    font-family: var(--rubrik);
+    line-height: 4rem;
+    margin-bottom: 3rem;
 }
 
 .paket p {
-    color: #6d756d;
+    color: var(--p2-color);
     letter-spacing: 0.1rem;
     line-height: 2rem;
+}
+
+.paket-section-text {
+    caption-side: top;
+    font-size: 0.7rem;
+    font-family: var(--p-font);
+    color: var(--p3-color);
+
+    margin-left: 1rem;
+    margin-bottom: 1rem;
 }
 
 .paket-section {
@@ -463,10 +553,10 @@ footer {
 }
 
 .table th {
-    color: #626a62;
-    background-color: #e8e4d8;
+    color: var(--p2-color);
+    background-color: var(--bg2-color);
     font-size: 12px;
-    font-family: "DM Sans", sans-serif;
+    font-family: var(--p-font);
     padding: 0 6px 20px;
     letter-spacing: 0.08rem;
     overflow-wrap: break-word;
@@ -474,25 +564,26 @@ footer {
 }
 
 .table td {
-    color: #596159;
+    color: var(--p3-color);
     font-size: 14px;
-    font-family: "DM Sans", sans-serif;
+    font-family: var(--p-font);
     line-height: 1.5rem;
     padding: 20px 0 20px 20px;
 }
 
 td h1 {
-    color: #193c2b;
+    color: var(--bg3-color);
     font-size: 24px;
-    font-family: "DM Serif Display", serif;
+    font-family: var(--rubrik);
+    font-weight: 400;
     margin-bottom: 20px;
 }
 
 td h2 {
-    color: #7c847c;
+    color: var(--p3-color);
     font-size: 12px;
     font-weight: 100;
-    font-family: "DM Sans", sans-serif;
+    font-family: var(--p2-color);
     margin-bottom: 20px;
 }
 
@@ -515,9 +606,9 @@ td h2 {
     gap: 12px;
     white-space: nowrap;
     font-size: 14px;
-    font-family: "DM Sans", sans-serif;
+    font-family: var(--p-font);
     font-weight: bold;
-    color: #f7f3e9;
+    color: var(--bg1-color);
     border-radius: 34px;
     padding: 8px 16px;
     background-color: var(--green-color);
@@ -538,10 +629,10 @@ td h2 {
 
 .go-paket {
     text-decoration: none;
-    color: #6c746c;
+    color: var(--p3-color);
     font-weight: bold;
     font-size: 14px;
-    font-family: "DM Sans", sans-serif;
+    font-family: var(--green-color);
 }
 
 .paket-intro {
@@ -550,23 +641,26 @@ td h2 {
 }
 
 .paket-intro h1 {
-    color: #365d46;
-    font-size: 12px;
-    font-family: "DM Sans", sans-serif;
-    margin-top: 20px;
+    color: var(--green-color);
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    font-family: var(--h6-font);
+    margin-top: 2rem;
     letter-spacing: 0.2rem;
 }
 
 .paket-intro h2 {
-    color: #193c2b;
-    font-size: 60px;
+    color: var(--bg3-color);
+    font-size: 3rem;
+    line-height: 4rem;
     font-weight: 700;
-    font-family: "DM Serif Display", serif;
+    font-family: var(--rubrik);
+    margin-top: 1rem;
+    margin-bottom: 2rem;
 }
 .paket-intro p {
-    color: #5d655d;
-    font-size: 20px;
-    font-family: "DM sans", sans-serif;
+    color: var(--p2-color);
+    font-family: var(--h6-font);
     line-height: 1.5rem;
 }
 
@@ -583,7 +677,7 @@ td h2 {
 
 .paket-content h3 {
     margin-top: 10px;
-    color: #8b7444;
+    color: var(--extra-color2);
     font-size: 12px;
     font-weight: bold;
     font-family: "DM sans", sans-serif;
@@ -592,27 +686,26 @@ td h2 {
 .paket-content h4 {
     color: #193c2b;
     font-size: 24px;
-    font-weight: bold;
-    font-family: "DM serif Display", serif;
+    font-family: var(--rubrik);
 }
 
 .paket-content p {
-    color: #626a62;
-    font-size: 16px;
-    font-weight: bold;
-    font-family: "DM sans", sans-serif;
+    color: var(--p3-color);
+    font-size: 1rem;
+
+    font-family: var(--p-font);
 }
 
 .boka-button {
     font-size: 14px;
-    font-family: "DM Sans", sans-serif;
+    font-family: var(--p-font);
     font-weight: bold;
-    color: #f7f3e9;
+    color: var(--bg1-color);
     border-radius: 34px;
     padding: 8px 16px;
     background-color: var(--green-color);
     border: none;
-    margin-top: 10px;
+    margin-top: 2rem;
     text-decoration: none;
 }
 
@@ -625,6 +718,7 @@ td h2 {
 }
 
 .paket-individuell-img {
+    border-radius: 30px;
     width: 350px;
     height: 250px;
     margin-top: 20px;
@@ -643,20 +737,21 @@ td h2 {
 
 .kontakt-banner-rubrik {
     color: #52735d;
-    font-size: 12px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.7rem;
+    font-family: var(--h6-font);
     margin: 0 0 14px 0;
     letter-spacing: 0.2rem;
 }
 
 .kontakt-banner-text h3 {
-    color: #f7f3e9;
-    font-size: 60px;
-    font-family: Arial, Helvetica, sans-serif;
+    color: var(--p1-color);
+    font-size: 3.75rem;
+    line-height: 4rem;
+    font-family: var(--rubrik);
 }
 
 .kontakt-banner-text p {
-    color: #cbd6ca;
+    color: var(--p1-color);
     letter-spacing: 0.1rem;
     line-height: 2rem;
 }
@@ -671,18 +766,18 @@ td h2 {
 }
 
 .guider h1 {
-    color: #365d46;
-    font-size: 12px;
-    font-family: "DM Sans", sans-serif;
+    color: var(--green-color);
+    font-size: 0.7rem;
+    font-family: var(--h6-font);
     margin-bottom: 20px;
     letter-spacing: 0.2rem;
 }
 
 .guider h2 {
-    color: #193c2b;
-    font-size: 60px;
+    color: var(--bg3-color);
+    font-size: 3rem;
     font-weight: 700;
-    font-family: "DM Serif Display", serif;
+    font-family: var(--rubrik);
     margin-bottom: 20px;
 }
 
@@ -715,7 +810,7 @@ td h2 {
 }
 
 .guide-kort h3 {
-    color: #193c2b;
+    color: var(--bg3-color);
     font-size: 24px;
     font-weight: 700;
     font-family: "DM Serif Display", serif;
@@ -728,6 +823,10 @@ td h2 {
     font-weight: bold;
     font-family: "DM Sans", sans-serif;
     line-height: 1.5rem;
+}
+
+.guide-kort a {
+    text-decoration-color: var(--extra-color2);
 }
 
 #initialer-al,
@@ -773,26 +872,26 @@ td h2 {
 }
 
 .kontakt-section h1 {
-    color: #365d46;
+    color: var(--green-color);
     font-size: 12px;
     font-weight: 550;
-    font-family: "DM Sans", sans-serif;
+    font-family: var(--h6-font);
     margin-bottom: 20px;
     letter-spacing: 0.2rem;
 }
 
 .kontakt-section h2 {
-    color: #193c2b;
-    font-size: 48px;
-    font-weight: 700;
-    font-family: "DM Serif Display", serif;
+    color: var(--bg3-color);
+    font-size: 3rem;
+    font-weight: 600;
+    font-family: var(--rubrik);
     margin-bottom: 16px;
 }
 
 .kontakt-section p {
-    color: #626a62;
+    color: var(--p2-color);
     font-size: 16px;
-    font-family: "DM Sans", sans-serif;
+    font-family: var(--p-font);
     line-height: 1.5rem;
 }
 
@@ -855,11 +954,19 @@ td h2 {
 .galleri-main {
     min-height: 100vh;
 
-    font-family: Arial, Helvetica, sans-serif;
-
     padding: var(--sid-padding-mobil);
 
-    background-color: var(--bg2-color);
+    background-color: var(--bg1-color);
+}
+
+.galleri-main h2 {
+    font-size: 3.75rem;
+    line-height: 4rem;
+    margin-bottom: 2rem;
+}
+
+.galleri-main p {
+    color: var(--p2-color);
 }
 
 .galleri-container {
@@ -881,44 +988,79 @@ td h2 {
         margin-left: 12%;
     }
 
-/* === STARTSIDA === */
+    /* === STARTSIDA === */
 
-/* main */
-.startsida{
-    display: flex;
-}
+    /* main */
 
-.startsida-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 77%;
+    .startsida {
+        display: flex;
+    }
 
-}
+    .startsida-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 77%;
+        margin-left: 12%;
+    }
 
-.startsida h6 {
-    width: fit-content;
-}
+    .startsida h6 {
+        width: fit-content;
+    }
 
-.startsida h1 {
-    font-size: 6.8rem;
-    line-height: 6.5rem;
-}
+    .startsida h1 {
+        font-size: 6.8rem;
+        line-height: 6.5rem;
+    }
 
-/* om */
+    /* om */
 
-.om-paketcontainer {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
+    .om-intro-text {
+        display: flex;
+        gap: 5rem;
+        align-items: end;
 
- /* === GALLERI === */
+        margin-left: 12%;
+        margin-right: 12%;
+    }
 
-.galleri-container {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    gap: 0.5rem;
-}
+    .om-intro-text h2 {
+        font-size: 4.5rem;
+    }
+
+    .om-paketcontainer {
+        margin-left: 12%;
+        margin-right: 12%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    /* bilder */
+
+    .bilder-text-intro {
+        margin-left: 12%;
+    }
+
+    .bilder-text h2 {
+        font-size: 4rem;
+    }
+
+    .knapp-galleri {
+        margin-left: 12%;
+    }
+
+    .bilder-container {
+        margin-left: 12%;
+        margin-right: 12%;
+    }
+
+    /* === GALLERI === */
+
+    .galleri-container {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        gap: 0.5rem;
+    }
 
     /* Paket */
     .paket {
@@ -936,6 +1078,7 @@ td h2 {
     }
 
     .paket h2 {
+        line-height: 6rem;
         grid-column: 1;
         font-size: 96px;
         margin: 0;
@@ -948,6 +1091,7 @@ td h2 {
         font-family: "DM Sans", sans-serif;
         color: #616860;
         max-width: 400px;
+        margin-right: 25%;
     }
 
     .paket-section {
@@ -990,6 +1134,29 @@ td h2 {
         box-sizing: border-box;
     }
 
+    /* Galleri */
+
+    .galleri-intro {
+        padding: 0 12%;
+    }
+
+    .galleri-intro-text {
+        display: flex;
+        align-items: end;
+        gap: 5rem;
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+    }
+
+    .galleri-intro-text h2 {
+        font-size: 96px;
+        line-height: 6rem;
+    }
+
+    .galleri-container {
+        padding: 0 12%;
+    }
+
     /* Kontakt */
     .kontakt-banner-rubrik {
         margin-left: 12%;
@@ -1007,6 +1174,8 @@ td h2 {
         font-weight: bold;
         margin-bottom: 20px;
         margin-left: 12%;
+
+        line-height: 6rem;
     }
 
     .kontakt-banner-text p {
@@ -1014,7 +1183,7 @@ td h2 {
         font-family: "DM Sans", sans-serif;
         color: #cbd6ca;
         max-width: 400px;
-        margin-left: 5%;
+        margin-right: 12%;
     }
 
     .guider h2 {
