@@ -1238,3 +1238,11 @@ td h2 {
         margin-left: 12.2%;
     }
 }
+
+/* Fokusmarkering */
+
+a:focus,
+button:focus {
+    outline: 4px solid var(--extra-color1); 
+    outline-offset: 4px;
+}
