@@ -388,7 +388,7 @@ main {
 /* VÄNNER */
 
 .vänner {
-    min-height: 30vh;
+    min-height: auto;
 
     background-color: var(--bg1-color);
 
