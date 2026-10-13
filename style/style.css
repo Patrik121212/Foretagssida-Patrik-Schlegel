@@ -1134,6 +1134,12 @@ td h2 {
         box-sizing: border-box;
     }
 
+    /* separata paketsidor */
+
+    .paket-intro-container {
+        padding: 4rem 12%
+    }
+
     /* Galleri */
 
     .galleri-intro {
