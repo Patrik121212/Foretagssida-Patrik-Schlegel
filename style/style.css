@@ -1253,6 +1253,7 @@ button:focus-visible {
         --bg1-color: #111a14;
         --bg2-color: #1a261f;
         --bg3-color: #f0f5f1;
+        --bg4-color: #193c2b;
 
         --p1-color: #193c2b;
         --p2-color: #cfd6ce;
@@ -1260,6 +1261,7 @@ button:focus-visible {
 
         --extra-color1: #f3dca2;
         --extra-color2: #bca471;
+        --extra-color3: #24382D;
 
         --green-color: #4a775d;
     }
@@ -1270,5 +1272,38 @@ button:focus-visible {
 
     td h1 {
         color: var(--p1-color);
+    }
+
+    .nav-link.active,
+    .nav-link.active:hover {
+        color: var(--p3-color) !important;
+        text-decoration: underline;
+        text-decoration-color: var(--p3-color);
+        text-underline-offset: 5px;
+    }
+
+    .nav-link:hover,
+    .navbar-brand:hover {
+        color: var(--p3-color) !important;
+        text-decoration: none;
+    }
+
+    footer {
+        background-color: var(--bg1-color);
+    }
+
+    .footer-title,
+    .footer-paragraph,
+    .footer-paragraph a {
+        color: white;
+    }
+
+    td {
+        background-color: var(--extra-color3) !important;
+
+    }
+
+    td h1 {
+        color: var(--p2-color)
     }
 }
