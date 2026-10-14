@@ -487,6 +487,12 @@ footer {
     margin-top: 0;
 }
 
+.main-knapp {
+    font-family: var(--p-font);
+    color: var(--bg2-color);
+    text-decoration: none;
+}
+
 /* ========== PAKET ========== */
 
 .paket-main {
@@ -1295,12 +1301,19 @@ button:focus-visible {
     .footer-title,
     .footer-paragraph,
     .footer-paragraph a {
-        color: white;
+        color: var(--bg3-color);
+    }
+
+    .main-knapp {
+        color: var(--bg3-color);
+    }
+
+    .main-knapp:hover {
+        color: var(--p2-color);
     }
 
     td {
         background-color: var(--extra-color3) !important;
-
     }
 
     td h1 {
