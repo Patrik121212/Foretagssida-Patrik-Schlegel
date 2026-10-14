@@ -1,3 +1,6 @@
+/*  navbar:115, startida:199, om:268, bilder:344, vänner:389, footer:423, paket:490, enskilda paket sidor:621, galleri:729, om&kontakt:757, desktop view:982, fokusmarkering:1241, darkmode:1249
+    */
+
 /* JAG BÖRJAR MED ATT UTGÅ FRÅN MOBILSKÄRM NÄR JAG JOBBAR I CSS, ihopne SE 375 x 667 px */
 
 /* IMPORTERAR FONTS FRÅN FIGMAS SKISS*/
@@ -42,9 +45,7 @@
 
 :root {
     --rubrik: "DMSerifDisplay", serif;
-
     --h6-font: "DMSans", sans-serif;
-
     --p-font: "DMSans", sans-serif;
 
     --p1-color: #edf2eb;
@@ -111,7 +112,7 @@ main {
     flex: 1;
 }
 
-/* Navbar Styles*/
+/* ========== NAVBAR ==========*/
 
 .logo-container {
     display: flex;
@@ -195,7 +196,7 @@ main {
     text-decoration: none;
 }
 
-/* === STARTSIDA === */
+/* ========== STARTSIDA ========== */
 
 .startsida {
     background-image: 
@@ -264,7 +265,7 @@ main {
     border-radius: 30px;
 }
 
-/* === OM === */
+/* ========== OM ========== */
 
 .om {
     display: flex;
@@ -340,7 +341,7 @@ main {
     color: var(--p2-color);
 }
 
-/* === BILDER === */
+/* ========== BILDER ========== */
 
 .bilder-text {
     display: flex;
@@ -385,7 +386,7 @@ main {
     border-radius: 30px;
 }
 
-/* VÄNNER */
+/* ========== VÄNNER ========== */
 
 .vänner {
     min-height: auto;
@@ -419,7 +420,7 @@ main {
     font-weight: 500;
 }
 
-/* Footer styles */
+/* ========== FOOTER ========== */
 
 /* Tar bort bootstrap margin */
 .mt-5 {
@@ -486,10 +487,10 @@ footer {
     margin-top: 0;
 }
 
-/* PAKET */
+/* ========== PAKET ========== */
 
 .paket-main {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--p-font);
 
     background-color: var(--bg1-color);
 }
@@ -617,7 +618,7 @@ td h2 {
     text-decoration: none;
 }
 
-/* Enskilda paket-sidor */
+/* ========== ENSKILDA PAKET SIDOR ========== */
 .paket-intro-container {
     display: flex;
     flex-direction: column;
@@ -725,7 +726,36 @@ td h2 {
     object-fit: cover;
 }
 
-/* Om & Kontakt */
+/* ========== GALLERI ========== */
+
+.galleri-main {
+    min-height: 100vh;
+
+    padding: var(--sid-padding-mobil);
+
+    background-color: var(--bg1-color);
+}
+
+.galleri-main h2 {
+    font-size: 3.75rem;
+    line-height: 4rem;
+    margin-bottom: 2rem;
+}
+
+.galleri-main p {
+    color: var(--p2-color);
+}
+
+.galleri-container {
+    display: grid;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 0.5rem;
+}
+
+/* ========== OM & KONTAKT ========== */
+
 .kontakt-banner {
     display: flex;
     flex-direction: column;
@@ -868,7 +898,7 @@ td h2 {
 
     padding: var(--sid-padding-mobil);
 
-    background-color: #e4dfd1;
+    background-color: var(--bg2-color);
 }
 
 .kontakt-section h1 {
@@ -899,7 +929,7 @@ td h2 {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    background-color: #f7f3e9;
+    background-color: var(--bg1-color);
     padding: 25px;
     border-radius: 24px;
 }
@@ -908,7 +938,7 @@ td h2 {
     font-size: 14px;
     font-family: "DM Sans", sans-serif;
     font-weight: bold;
-    color: #39483c;
+    color: var(--p2-color);
 }
 
 .formular-rad {
@@ -949,35 +979,8 @@ td h2 {
     border: none;
 }
 
-/* ======================== GALLERI ========================= */
+/* ========== Desktop View ========== */
 
-.galleri-main {
-    min-height: 100vh;
-
-    padding: var(--sid-padding-mobil);
-
-    background-color: var(--bg1-color);
-}
-
-.galleri-main h2 {
-    font-size: 3.75rem;
-    line-height: 4rem;
-    margin-bottom: 2rem;
-}
-
-.galleri-main p {
-    color: var(--p2-color);
-}
-
-.galleri-container {
-    display: grid;
-
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    gap: 0.5rem;
-}
-
-/* Desktop View*/
 @media (min-width: 990px) {
     .navbar-nav {
         margin-right: 18%;
@@ -1054,14 +1057,6 @@ td h2 {
         margin-right: 12%;
     }
 
-    /* === GALLERI === */
-
-    .galleri-container {
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: auto;
-        gap: 0.5rem;
-    }
-
     /* Paket */
     .paket {
         display: grid;
@@ -1087,9 +1082,8 @@ td h2 {
 
     .paket p {
         grid-column: 2;
-        font-size: 18px;
-        font-family: "DM Sans", sans-serif;
-        color: #616860;
+        font-family: var(--p-font);
+        color: var(--p2-color);
         max-width: 400px;
         margin-right: 25%;
     }
@@ -1137,10 +1131,16 @@ td h2 {
     /* separata paketsidor */
 
     .paket-intro-container {
-        padding: 4rem 12%
+        padding: 4rem 12%;
     }
 
     /* Galleri */
+
+    .galleri-container {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        gap: 0.5rem;
+    }
 
     .galleri-intro {
         padding: 0 12%;
@@ -1176,8 +1176,8 @@ td h2 {
 
     .kontakt-banner-text h3 {
         font-size: 96px;
-        font-family: "DM Sans Display", serif;
-        font-weight: bold;
+        font-family: var(--rubrik);
+
         margin-bottom: 20px;
         margin-left: 12%;
 
@@ -1185,9 +1185,8 @@ td h2 {
     }
 
     .kontakt-banner-text p {
-        font-size: 18px;
-        font-family: "DM Sans", sans-serif;
-        color: #cbd6ca;
+        font-family: var(--p-font);
+        color: var(--p1-color);
         max-width: 400px;
         margin-right: 12%;
     }
@@ -1243,6 +1242,33 @@ td h2 {
 
 a:focus-visible,
 button:focus-visible {
-    outline: 4px solid var(--extra-color1); 
+    outline: 4px solid var(--extra-color1);
     outline-offset: 4px;
+}
+
+/* Darkmode */
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg1-color: #111a14;
+        --bg2-color: #1a261f;
+        --bg3-color: #f0f5f1;
+
+        --p1-color: #193c2b;
+        --p2-color: #cfd6ce;
+        --p3-color: #9ca69b;
+
+        --extra-color1: #f3dca2;
+        --extra-color2: #bca471;
+
+        --green-color: #4a775d;
+    }
+
+    .startsida p {
+        color: var(--p2-color);
+    }
+
+    td h1 {
+        color: var(--p1-color);
+    }
 }
