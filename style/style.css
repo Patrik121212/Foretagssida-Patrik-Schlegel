@@ -572,6 +572,14 @@ footer {
     box-sizing: border-box;
 }
 
+#top-right-corner {
+    border-top-right-radius: 24px;
+}
+
+#top-left-corner {
+    border-top-left-radius: 24px;
+}
+
 .table td {
     color: var(--p3-color);
     font-size: 14px;
