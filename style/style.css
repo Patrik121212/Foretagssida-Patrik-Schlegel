@@ -716,6 +716,11 @@ td h2 {
     border: none;
     margin-top: 2rem;
     text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.boka-button:hover {
+    background-color: var(--bg3-color);
 }
 
 .paket-bild img {
@@ -1342,5 +1347,13 @@ button:focus-visible {
     .kontakt-banner h3,
     .kontakt-banner p {
         color: var(--bg3-color);
+    }
+
+    .boka-button {
+        color: var(--bg3-color);
+    }
+
+    .boka-button:hover {
+        background-color: var(--bg1-color);
     }
 }
