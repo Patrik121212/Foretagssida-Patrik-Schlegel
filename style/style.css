@@ -990,6 +990,11 @@ td h2 {
     padding: 16px 28px;
     background-color: var(--green-color);
     border: none;
+    transition: background-color 0.3s ease;
+}
+
+.kontakta-oss button:hover {
+    background-color: var(--bg4-color);
 }
 
 /* ========== Desktop View ========== */
@@ -1343,10 +1348,12 @@ button:focus-visible {
         background-color: var(--bg2-color);
     }
 
-    .kontakt-banner-rubrik,
-    .kontakt-banner h3,
-    .kontakt-banner p {
+    .kontakt-banner h3 {
         color: var(--bg3-color);
+    }
+
+    .kontakt-banner p {
+        color: var(--p2-color);
     }
 
     .boka-button {
