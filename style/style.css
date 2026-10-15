@@ -1282,6 +1282,18 @@ button:focus-visible {
         color: var(--p1-color);
     }
 
+    .paket-content h4 {
+        color: var(--bg3-color);
+    }
+
+    .paket-knapp {
+        color: var(--p2-color);
+    }
+
+    .paket-knapp:hover {
+        background-color: var(--bg1-color);
+    }
+
     .nav-link.active,
     .nav-link.active:hover {
         color: var(--p3-color) !important;
@@ -1320,5 +1332,15 @@ button:focus-visible {
 
     td h1 {
         color: var(--p2-color)
+    }
+
+    .kontakt-banner {
+        background-color: var(--bg2-color);
+    }
+
+    .kontakt-banner-rubrik,
+    .kontakt-banner h3,
+    .kontakt-banner p {
+        color: var(--bg3-color);
     }
 }
