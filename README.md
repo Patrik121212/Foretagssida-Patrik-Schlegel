@@ -26,7 +26,8 @@ CSS
 Vi delade upp det såhär från början, men vi båda har suttit och byggt på båda sidorna.
 
 Skiss/Design skapad med Figma:
-https://www.figma.com/make/uNV19MQS851oKq1vXv44Qw/F%25C3%25B6retagssida-med-flera-sektioner?p=f&fullscreen=1&preview-route=%2F%23packages
+<a href="https://www.figma.com/make/uNV19MQS851oKq1vXv44Qw/F%25C3%25B6retagssida-med-flera-sektioner?p=f&fullscreen=1&preview-route=%2F%23packages" target="_blank"> Figma skiss länk </a>
+
 
 Kanban Board:
 https://github.com/users/junhaoxu1/projects/2
