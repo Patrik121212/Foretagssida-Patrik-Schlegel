@@ -994,7 +994,7 @@ td h2 {
 }
 
 .kontakta-oss button:hover {
-    background-color: var(--bg4-color);
+    background-color: var(--bg3-color);
 }
 
 /* ========== Desktop View ========== */
@@ -1354,6 +1354,10 @@ button:focus-visible {
 
     .kontakt-banner p {
         color: var(--p2-color);
+    }
+
+    .kontakta-oss button:hover {
+        background-color: var(--bg4-color);
     }
 
     .boka-button {
